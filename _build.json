@@ -11,7 +11,7 @@
                     {"defines": [ "GTEST_HAS_TR1_TUPLE=0" ]},
                     {"includedirs": [
                         "googletest/include/",
-                        "googlemock/src/"
+                        "googletest/src/"
                     ]},
                     {"files": [
                         "googletest/src/gtest-all.cc"
