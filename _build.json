@@ -10,13 +10,10 @@
                     {"kind": "StaticLib"},
                     {"defines": [ "GTEST_HAS_TR1_TUPLE=0" ]},
                     {"includedirs": [
-                        "googletest/include/",
-                        "googletest/src/"
+                        "googletest/include/"
                     ]},
                     {"files": [
-                        "googletest/src/**.cc",
-                        "googletest/src/**.h",
-                        "googletest/include/**.h"
+                        "googletest/src/gtest-all.cc"
                     ]}
                 ]
             },
@@ -49,12 +46,10 @@
                     {"kind": "StaticLib"},
                     {"defines": ["GTEST_HAS_TR1_TUPLE=0"]},
                     {"includedirs": [
-                        "googletest/include/"  
+                        "include/"  
                     ]},
                     {"files": [
-                        "src/**.cc",
-                        "src/**.h",
-                        "include/**.h"
+                        "src/gtest-all.cc"
                     ]}
                 ]
             }
