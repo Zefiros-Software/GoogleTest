@@ -13,9 +13,9 @@
                         "googletest/include/"  
                     ]},
                     {"files": [
-                        "googletest/src/*.cc",
-                        "googletest/src/*.h",
-                        "googletest/include/**"
+                        "googletest/src/**.cc",
+                        "googletest/src/**.h",
+                        "googletest/include/**.h"
                     ]}
                 ]
             },
@@ -29,9 +29,9 @@
                         "googlemock/include/"  
                     ]},
                     {"files": [
-                        "googlemock/src/*.cc",
-                        "googlemock/src/*.h",
-                        "googlemock/include/**"
+                        "googlemock/src/**.cc",
+                        "googlemock/src/**.h",
+                        "googlemock/include/**.h"
                     ]}
                 ]
             }
@@ -51,9 +51,9 @@
                         "googletest/include/"  
                     ]},
                     {"files": [
-                        "src/*.cc",
-                        "src/*.h",
-                        "include/**"
+                        "src/**.cc",
+                        "src/**.h",
+                        "include/**.h"
                     ]}
                 ]
             }
