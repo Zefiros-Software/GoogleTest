@@ -1,7 +1,7 @@
 [
     {
         "version": ">1.7.0 || @head",
-        "build":
+        "projects":
         [
             {
                 "project": "GoogleTest",
@@ -33,7 +33,7 @@
     },
     {
         "version": "<=1.7.0",
-        "build":
+        "projects":
         [
             {
                 "project": "GoogleTest",
