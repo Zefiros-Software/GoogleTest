@@ -25,12 +25,11 @@
                     {"kind": "StaticLib"},
                     {"defines": ["GTEST_HAS_TR1_TUPLE=0"]},
                     {"includedirs": [
-                        "googlemock/include/"
+                        "googlemock/include/",
+                        "googlemock/"
                     ]},
                     {"files": [
-                        "googlemock/src/**.cc",
-                        "googlemock/src/**.h",
-                        "googlemock/include/**.h"
+                        "googlemock/src/gmock-all.cc"
                     ]}
                 ]
             }
