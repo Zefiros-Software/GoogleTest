@@ -10,7 +10,8 @@
                     {"kind": "StaticLib"},
                     {"defines": [ "GTEST_HAS_TR1_TUPLE=0" ]},
                     {"includedirs": [
-                        "googletest/include/"  
+                        "googletest/include/",
+                        "googletest/src/"
                     ]},
                     {"files": [
                         "googletest/src/**.cc",
