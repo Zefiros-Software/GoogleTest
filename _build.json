@@ -3,51 +3,60 @@
         "version": ">1.7.0 || @head",
         "projects":
         [
-            [
-                {"project": "GoogleTest"},
-                {"kind": "StaticLib"},
-                {"defines": [ "GTEST_HAS_TR1_TUPLE=0" ]},
-                {"includedirs": [
-                    "include/"  
-                ]},
-                {"files": [
-                    "googletest/src/*.cc",
-                    "googletest/src/*.h",
-                    "googletest/include/**"
-                ]}
-            ],
-            [
-                {"project": "GoogleMock"},
-                {"kind": "StaticLib"},
-                {"defines": ["GTEST_HAS_TR1_TUPLE=0"]},
-                {"includedirs": [
-                    "googlemock/include/"  
-                ]},
-                {"files": [
-                    "googlemock/src/*.cc",
-                    "googlemock/src/*.h",
-                    "googlemock/include/**"
-                ]}
-            ]
+            {
+                "project": "GoogleTest",
+                "do":
+                [
+                    {"kind": "StaticLib"},
+                    {"defines": [ "GTEST_HAS_TR1_TUPLE=0" ]},
+                    {"includedirs": [
+                        "include/"  
+                    ]},
+                    {"files": [
+                        "googletest/src/*.cc",
+                        "googletest/src/*.h",
+                        "googletest/include/**"
+                    ]}
+                ]
+            },
+            {
+                "project": "GoogleMock",
+                "do":
+                [
+                    {"kind": "StaticLib"},
+                    {"defines": ["GTEST_HAS_TR1_TUPLE=0"]},
+                    {"includedirs": [
+                        "googlemock/include/"  
+                    ]},
+                    {"files": [
+                        "googlemock/src/*.cc",
+                        "googlemock/src/*.h",
+                        "googlemock/include/**"
+                    ]}
+                ]
+            }
         ]
     },
     {
         "version": "<=1.7.0",
         "projects":
         [
-            [
-                {"project": "GoogleTest"},
-                {"kind": "StaticLib"},
-                {"defines": ["GTEST_HAS_TR1_TUPLE=0"]},
-                {"includedirs": [
-                    "include/"  
-                ]},
-                {"files": [
-                    "src/*.cc",
-                    "src/*.h",
-                    "include/**"
-                ]}
-            ]
-        ]
+            {
+                "project": "GoogleTest",
+                "do":
+                [
+                    {"kind": "StaticLib"},
+                    {"defines": ["GTEST_HAS_TR1_TUPLE=0"]},
+                    {"includedirs": [
+                        "include/"  
+                    ]},
+                    {"files": [
+                        "src/*.cc",
+                        "src/*.h",
+                        "include/**"
+                    ]}
+                ]
+            }
+        }
     }
 ]
