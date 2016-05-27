@@ -9,8 +9,10 @@
                 [
                     {"kind": "StaticLib"},
                     {"defines": [ "GTEST_HAS_TR1_TUPLE=0" ]},
+                    {"exportincludedirs": [
+                        "googletest/include/"                        
+                    ]},
                     {"includedirs": [
-                        "googletest/include/",
                         "googletest/"
                     ]},
                     {"files": [
@@ -24,6 +26,10 @@
                 [
                     {"kind": "StaticLib"},
                     {"defines": ["GTEST_HAS_TR1_TUPLE=0"]},
+                    {"uses": "GoogleTest"},
+                    {"exportincludedirs": [
+                        "googlemock/include/"                        
+                    ]},
                     {"includedirs": [
                         "googlemock/include/",
                         "googlemock/"
@@ -45,6 +51,9 @@
                 [
                     {"kind": "StaticLib"},
                     {"defines": ["GTEST_HAS_TR1_TUPLE=0"]},
+                    {"exportincludes": [
+                        "include/"                        
+                    ]},
                     {"includedirs": [
                         "include/",
                         "./"
