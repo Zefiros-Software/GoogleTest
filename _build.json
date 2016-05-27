@@ -8,7 +8,7 @@
                 "do":
                 [
                     {"kind": "StaticLib"},
-                    {"defines": [ "GTEST_USE_OWN_TR1_TUPLE=0" ]},
+                    {"exportdefines": [ "GTEST_USE_OWN_TR1_TUPLE=0" ]},
                     {"exportincludedirs": [
                         "googletest/include/"                        
                     ]},
@@ -25,7 +25,6 @@
                 "do":
                 [
                     {"kind": "StaticLib"},
-                    {"defines": ["GTEST_USE_OWN_TR1_TUPLE=0"]},
                     {"uses": "GoogleTest"},
                     {"exportincludedirs": [
                         "googlemock/include/"                        
