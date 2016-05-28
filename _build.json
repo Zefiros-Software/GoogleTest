@@ -26,6 +26,8 @@
                 [
                     {"kind": "StaticLib"},
                     {"uses": "GoogleTest"},
+                    {"reexportincludedirs": "GoogleTest"},
+                    {"reexportdefines": "GoogleTest"},
                     {"exportincludedirs": [
                         "googlemock/include/"                        
                     ]},
