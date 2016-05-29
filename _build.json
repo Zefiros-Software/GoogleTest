@@ -51,12 +51,11 @@
                 "do":
                 [
                     {"kind": "StaticLib"},
-                    {"defines": ["GTEST_HAS_TR1_TUPLE=0"]},
-                    {"exportincludes": [
+                    {"exportdefines": ["GTEST_HAS_TR1_TUPLE=0"]},
+                    {"exportincludedirs": [
                         "include/"                        
                     ]},
                     {"includedirs": [
-                        "include/",
                         "./"
                     ]},
                     {"files": [
