@@ -20,7 +20,7 @@
                     ]},
                     {"filter": "system:not windows",
                      "do": [
-                        {"links": "pthread"}
+                        {"exportlinks": "pthread"}
                     ]}
                 ]
             },
@@ -67,7 +67,7 @@
                     ]},
                     {"filter": "system:not windows",
                      "do": [
-                        {"links": "pthread"}
+                        {"exportlinks": "pthread"}
                     ]}
                 ]
             }
