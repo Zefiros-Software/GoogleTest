@@ -17,6 +17,10 @@
                     ]},
                     {"files": [
                         "googletest/src/gtest-all.cc"
+                    ]},
+                    {"filter": "system:not windows",
+                     "do": [
+                        {"links": "pthread"}
                     ]}
                 ]
             },
@@ -60,6 +64,10 @@
                     ]},
                     {"files": [
                         "src/gtest-all.cc"
+                    ]},
+                    {"filter": "system:not windows",
+                     "do": [
+                        {"links": "pthread"}
                     ]}
                 ]
             }
