@@ -21,7 +21,7 @@
                         ]}
                     ]},
                     {"export": [
-                        {"defines": "GTEST_USE_OWN_TR1_TUPLE"},
+                        {"defines": "GTEST_USE_OWN_TR1_TUPLE=0"},
                         {"includedirs": "googletest/include/"}
                     ]}
                 ]
@@ -66,7 +66,7 @@
                         "src/gtest-all.cc"
                     ]},
                     {"export": [
-                        {"defines": "GTEST_USE_OWN_TR1_TUPLE"},
+                        {"defines": "GTEST_USE_OWN_TR1_TUPLE=0"},
                         {"includedirs": "include/"}
                     ]},
                     {"filter": "system:not windows",
