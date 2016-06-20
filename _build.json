@@ -16,7 +16,7 @@
                     ]},
                     {"filter": "system:not windows",
                      "do": [
-                        {"exportlinks": [
+                        {"links": [
                             "pthread"
                         ]}
                     ]},
