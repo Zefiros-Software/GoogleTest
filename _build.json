@@ -8,10 +8,6 @@
                 "do":
                 [
                     {"kind": "StaticLib"},
-                    {"exportdefines": [ "GTEST_USE_OWN_TR1_TUPLE=0" ]},
-                    {"exportincludedirs": [
-                        "googletest/include/"                        
-                    ]},
                     {"includedirs": [
                         "googletest/"
                     ]},
@@ -23,6 +19,10 @@
                         {"exportlinks": [
                             "pthread"
                         ]}
+                    ]},
+                    {"export": [
+                        {"defines": "GTEST_USE_OWN_TR1_TUPLE"},
+                        {"includedirs": "googletest/include/"}
                     ]}
                 ]
             },
@@ -43,6 +43,10 @@
                     ]},
                     {"files": [
                         "googlemock/src/gmock-all.cc"
+                    ]},
+                    {"reexport": [
+                        {"defines": "GoogleTest"},
+                        {"includedirs": "GoogleTest"}
                     ]}
                 ]
             }
