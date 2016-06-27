@@ -14,15 +14,15 @@
                     {"files": [
                         "googletest/src/gtest-all.cc"
                     ]},
-                    {"filter": "system:not windows",
-                     "do": [
-                        {"links": [
-                            "pthread"
-                        ]}
-                    ]},
                     {"export": [
                         {"defines": "GTEST_USE_OWN_TR1_TUPLE=0"},
-                        {"includedirs": "googletest/include/"}
+                        {"includedirs": "googletest/include/"},
+                        {"filter": "system:not windows",
+                         "do": [
+                            {"links": [
+                                "pthread"
+                            ]}
+                        ]}
                     ]}
                 ]
             },
@@ -45,6 +45,7 @@
                     {"reexport": [
                         {"defines": "GoogleTest"},
                         {"includedirs": "GoogleTest"}
+                        {"links": "GoogleTest"}
                     ]}
                 ]
             }
@@ -67,12 +68,12 @@
                     ]},
                     {"export": [
                         {"defines": "GTEST_USE_OWN_TR1_TUPLE=0"},
-                        {"includedirs": "include/"}
-                    ]},
-                    {"filter": "system:not windows",
-                     "do": [
-                        {"export": [
-                            {"links": "pthread"}
+                        {"includedirs": "include/"},
+                        {"filter": "system:not windows",
+                        "do": [
+                            {"export": [
+                                {"links": "pthread"}
+                            ]}
                         ]}
                     ]}
                 ]
