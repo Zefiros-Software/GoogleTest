@@ -44,7 +44,7 @@
                     ]},
                     {"reexport": [
                         {"defines": "GoogleTest"},
-                        {"includedirs": "GoogleTest"}
+                        {"includedirs": "GoogleTest"},
                         {"links": "GoogleTest"}
                     ]}
                 ]
