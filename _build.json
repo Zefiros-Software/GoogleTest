@@ -15,7 +15,14 @@
                         "googletest/src/gtest-all.cc"
                     ]},
                     {"export": [
-                        {"defines": "GTEST_USE_OWN_TR1_TUPLE=1"},
+                        {"filter": "system:macosx",
+                         "do": [
+                            {"defines": "GTEST_USE_OWN_TR1_TUPLE=1"}
+                        ]},
+                        {"filter": "system:not macosx",
+                         "do": [
+                            {"defines": "GTEST_USE_OWN_TR1_TUPLE=0"}
+                        ]},
                         {"includedirs": "googletest/include/"},
                         {"filter": "system:not windows",
                          "do": [
@@ -67,7 +74,14 @@
                         "src/gtest-all.cc"
                     ]},
                     {"export": [
-                        {"defines": "GTEST_USE_OWN_TR1_TUPLE=1"},
+                        {"filter": "system:macosx",
+                         "do": [
+                            {"defines": "GTEST_USE_OWN_TR1_TUPLE=1"}
+                        ]},
+                        {"filter": "system:not macosx",
+                         "do": [
+                            {"defines": "GTEST_USE_OWN_TR1_TUPLE=0"}
+                        ]},
                         {"includedirs": "include/"},
                         {"filter": "system:not windows",
                         "do": [
