@@ -34,9 +34,3 @@ project "GoogleMock"
         "GoogleTest",
         "GoogleMock"
     }
-
-    zpm.reexport({
-        includedirs = "GoogleTest",
-        defines = "GoogleTest",
-        links = "GoogleTest"
-    })
