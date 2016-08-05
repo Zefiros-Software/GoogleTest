@@ -10,7 +10,7 @@ usage "UGoogleTest"
     filter "system:not windows"
         links "pthread"
 
-usage "LibGoogleTest"
+project "GoogleTest"
 
     kind "StaticLib"
 
@@ -19,11 +19,12 @@ usage "LibGoogleTest"
 
     uses "UGoogleTest"
 
+--[[
 usage "UGoogleMock"
 
     includedirs "googlemock/include/"
 
-usage "LibGoogleMock"
+project "GoogleMock"
 
     kind "StaticLib"
 
@@ -33,10 +34,4 @@ usage "LibGoogleMock"
     uses {
         "GoogleTest",
         "UGoogleMock"
-    }
-
-project "GoogleTest"
-    uses {
-        "LibGoogleTest",
-        "LibGoogleMock"
-    }
+    }]]
