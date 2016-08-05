@@ -3,95 +3,11 @@
         "version": ">1.7.0 || @head",
         "projects":
         [
-            {
-                "project": "GoogleTest",
-                "do":
-                [
-                    {"kind": "StaticLib"},
-                    {"includedirs": [
-                        "googletest/"
-                    ]},
-                    {"files": [
-                        "googletest/src/gtest-all.cc"
-                    ]},
-                    {"export": [
-                        {"filter": "system:macosx",
-                         "do": [
-                            {"defines": "GTEST_USE_OWN_TR1_TUPLE=1"}
-                        ]},
-                        {"filter": "system:not macosx",
-                         "do": [
-                            {"defines": "GTEST_USE_OWN_TR1_TUPLE=0"}
-                        ]},
-                        {"includedirs": "googletest/include/"},
-                        {"filter": "system:not windows",
-                         "do": [
-                            {"links": [
-                                "pthread"
-                            ]}
-                        ]}
-                    ]}
-                ]
-            },
-            {
-                "project": "GoogleMock",
-                "do":
-                [
-                    {"kind": "StaticLib"},
-                    {"uses": "GoogleTest"},
-                    {"includedirs": [
-                        "googlemock/include/",
-                        "googlemock/"
-                    ]},
-                    {"files": [
-                        "googlemock/src/gmock-all.cc"
-                    ]},
-                    {"export": [
-                        {"includedirs": "googlemock/include/"}
-                    ]},
-                    {"reexport": [
-                        {"defines": "GoogleTest"},
-                        {"includedirs": "GoogleTest"},
-                        {"links": "GoogleTest"}
-                    ]}
-                ]
-            }
+            
         ]
     },
     {
         "version": "<=1.7.0",
-        "projects":
-        [
-            {
-                "project": "GoogleTest",
-                "do":
-                [
-                    {"kind": "StaticLib"},
-                    {"includedirs": [
-                        "./"
-                    ]},
-                    {"files": [
-                        "src/gtest-all.cc"
-                    ]},
-                    {"export": [
-                        {"filter": "system:macosx",
-                         "do": [
-                            {"defines": "GTEST_USE_OWN_TR1_TUPLE=1"}
-                        ]},
-                        {"filter": "system:not macosx",
-                         "do": [
-                            {"defines": "GTEST_USE_OWN_TR1_TUPLE=0"}
-                        ]},
-                        {"includedirs": "include/"},
-                        {"filter": "system:not windows",
-                        "do": [
-                            {"export": [
-                                {"links": "pthread"}
-                            ]}
-                        ]}
-                    ]}
-                ]
-            }
-        ]
+        "file": ".build.1.lua"
     }
 ]
