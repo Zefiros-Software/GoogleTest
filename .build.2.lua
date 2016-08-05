@@ -1,5 +1,5 @@
 usage "GoogleTest"
-    includedirs "googletest/include/"*
+    includedirs "googletest/include/"
 
     filter "system:macosx"
         defines "GTEST_USE_OWN_TR1_TUPLE=1"
