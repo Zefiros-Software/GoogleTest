@@ -17,7 +17,7 @@ project "GoogleTest"
     files "googletest/src/gtest-all.cc"
     includedirs "googletest/"
 
-    uses "GoogleTest_lib"
+    uses "GoogleTest"
 
 --[[
 usage "UGoogleMock"
