@@ -1,4 +1,4 @@
-usage "UGoogleTest"
+usage "GoogleTest"
     includedirs "googletest/include/"
 
     filter "system:macosx"
@@ -17,7 +17,7 @@ project "GoogleTest"
     files "googletest/src/gtest-all.cc"
     includedirs "googletest/"
 
-    uses "UGoogleTest"
+    uses "GoogleTest_lib"
 
 --[[
 usage "UGoogleMock"
