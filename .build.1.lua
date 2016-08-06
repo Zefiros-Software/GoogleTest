@@ -5,7 +5,7 @@ project "GoogleTest"
     files "src/gtest-all.cc"
     includedirs "./"
 
-    zpm.export(function()
+    zpm.export [[
 
         includedirs "include/"
 
@@ -17,4 +17,4 @@ project "GoogleTest"
 
         filter "system:not windows"
             links "pthread"
-    end)
+    ]]
