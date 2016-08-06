@@ -1,15 +1,3 @@
-usage "UGoogleTest"
-    includedirs "googletest/include/"
-
-    filter "system:macosx"
-        defines "GTEST_USE_OWN_TR1_TUPLE=1"
-
-    filter "system:not macosx"
-        defines "GTEST_USE_OWN_TR1_TUPLE=0"
-
-    filter "system:not windows"
-        links "pthread"
-
 project "GoogleTest"
 
     kind "StaticLib"
@@ -17,7 +5,18 @@ project "GoogleTest"
     files "googletest/src/gtest-all.cc"
     includedirs "googletest/"
 
-    uses "UGoogleTest"
+    zpm.export [[
+        includedirs "googletest/include/"
+
+        filter "system:macosx"
+            defines "GTEST_USE_OWN_TR1_TUPLE=1"
+
+        filter "system:not macosx"
+            defines "GTEST_USE_OWN_TR1_TUPLE=0"
+
+        filter "system:not windows"
+            links "pthread"
+    ]]
 
 --[[
 usage "UGoogleMock"
