@@ -18,11 +18,6 @@ project "GoogleTest"
             links "pthread"
     ]]
 
---[[
-usage "UGoogleMock"
-
-    includedirs "googlemock/include/"
-
 project "GoogleMock"
 
     kind "StaticLib"
@@ -30,7 +25,8 @@ project "GoogleMock"
     files "googlemock/src/gmock-all.cc"
     includedirs "googlemock/"
 
-    uses {
-        "GoogleTest",
-        "UGoogleMock"
-    }]]
+    zpm.uses "GoogleTest"
+
+    zpm.export [[
+        includedirs "googlemock/include/"
+    ]]
