@@ -16,6 +16,8 @@ project "GoogleTest"
 
         filter "system:not windows"
             links "pthread"
+
+        filter {}
     ]]
 
 project "GoogleMock"
