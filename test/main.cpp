@@ -22,6 +22,8 @@
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
 
+#include <stdint.h>
+
 TEST( UtilTest, FloatUInt32Max )
 {
     const uint8_t fl[2] = {1, 2};
