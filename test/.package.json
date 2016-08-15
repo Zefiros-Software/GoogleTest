@@ -1,0 +1,9 @@
+{
+    "name": "Zefiros-Software/GoogleTest-Dev",
+    "requires": [
+        {
+            "name": "Zefiros-Software/GoogleTest",
+            "version": "@head"
+        }
+    ]
+}
