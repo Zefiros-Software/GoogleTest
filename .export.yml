@@ -13,7 +13,7 @@ export: |
         zpm.export [[
             includedirs "googletest/include/"
 
-            cppdialect "C++17"
+            cppdialect "C++11"
             
             filter "system:macosx"
                 defines "GTEST_USE_OWN_TR1_TUPLE=1"
@@ -45,7 +45,7 @@ export: |
         zpm.export [[
             includedirs "googlemock/include/"
 
-            cppdialect "C++17"
+            cppdialect "C++11"
         ]]
 ...
 ---
