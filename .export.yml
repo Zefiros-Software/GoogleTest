@@ -12,14 +12,22 @@ export: |
 
         zpm.export [[
             includedirs "googletest/include/"
+
+            cppdialect "C++17"
             
             filter "system:macosx"
                 defines "GTEST_USE_OWN_TR1_TUPLE=1"
 
+            filter "system:windows"
+                defines {
+                  "GTEST_LANG_CXX11=1",
+                  "GTEST_HAS_TR1_TUPLE=0"
+                }
+
             filter "system:not macosx"
                 defines "GTEST_USE_OWN_TR1_TUPLE=0"
 
-            filter "system:not windows"
+            filter "system:posix"
                 links "pthread"
 
             filter {}
@@ -36,6 +44,8 @@ export: |
 
         zpm.export [[
             includedirs "googlemock/include/"
+
+            cppdialect "C++17"
         ]]
 ...
 ---
