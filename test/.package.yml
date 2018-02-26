@@ -1,0 +1,8 @@
+       
+libraries:
+  - name: Zefiros-Software/GoogleTest
+    version: '@head'
+    definition: ../
+modules:
+  - name: Zefiros-Software/Defaults
+    version: '@head'

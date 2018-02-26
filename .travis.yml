@@ -1,18 +1,23 @@
 sudo: required
 language: generic
 matrix:
-    include:
-        # Use the built in venv for linux builds
-        - os: linux
-          dist: trusty
-        # Use generic language for osx
-        - os: osx
-          osx_image: xcode8
-          language: generic
+  include:
+  - os: linux
+    dist: trusty
+    env: VERSION=6
+  - os: linux
+    dist: trusty
+    env: VERSION=7
+  - os: linux
+    dist: trusty
+    env: VERSION=5
+  - os: osx
+    osx_image: xcode8
+    language: generic
 install:
-    - wget -O - https://raw.githubusercontent.com/Zefiros-Software/ZPM/master/script/install-zpm-travis.sh | bash
+- source /dev/stdin <<< "$(curl -s https://raw.githubusercontent.com/Zefiros-Software/ZPM/features/refactor/script/install-zpm.sh)"
 script:
-    - bash script/travis-build.sh
+- cd test && zpm run test-definition GoogleTest
 notifications:
-    slack:
-        secure: "UT+qQORSyYau1OR37BFoNkoyFUot9JlU1f8f31Hvj4CTFFNmP17HKyAuXxobjE/IJXGkeakMtkmP5sH0MwkRFoxgKSBnzh4de4jHE1rmUzFRdett+91Z8QyXUtasaMxrQo3NZ0zMtl0QVATVr+V8Mavst6YOcfm4vNZcRNH4koIPwo8oJpTOKsHy7IJi8fsowZZ6EOEffRetHu5aRc8t24ZV9jbCOvaTiQlBuyFgjpWVaJAv1m+Y72FYrLOFQu5/g7Ce3YKeojIW9JD+RGfTUhyayOiULL8L/D7VBCUba8A/JYsnoVzqe+a22THmoNk4aDL7PRTdM3DV4b5ugCQdpuBN1Ffy7uHHhTZi5L8Oo1OApZ200+9H367JqH3iZkpk3EpSyCkVCE0KfzZfdwCa35mZiWfonJ1dU3YbvGUvUP2MUvpHT87Zr4im3RHVcE8j+J53XzNFcsVUFqFwisd3PeWjhYoN+yLQGoQkE2/fmZnFXbBLMZ+8DHrOFGTwMPTkIj3rSX3ud34Vrc2Cwfblt2GH99hqA1UvcwjR6VYJYiq2M/cd09fpAfWWBuVs+x0I2mAYBkRzI01R7JUkWl7YVtMYbFrTLp8fMKYOD+fxn5YARjNBw8jOM2V1HVmu3ua8M7/MPxmgqiT76YqLz7p9s689hsGvLqkVuhof/p1H+ts="
+  slack:
+    secure: qEI1ec8nzqjtH+/XAGWOumVaIBctmfncEYkNS2NqPvjLmzYlkwswavH/6xcLejWkLP7+Tq9Hffa+DUv4EVUBipAa/GYo5/hkRGOLtUZBvwpgUkyG+lP9cF2I+scaBcML/HgVynyzbQ3ilKrbBc+uuYghn2LdlHoIj7/hCTw9kt6KUkMLAF2fXn0e1PSl2NHSi6CO19e9VukozngAp5monwrgIQsPEWCR39ZiT4bHkcyTXfIvQ2WB0iETsE2qSqcArFK/HthE7GlzMkAs+URUObecpcx4V/pHSWf2QVe7R5YT7OucDmT8FaHYGIFr2Kt++wlDWFA86/A9Xy3Un+nWsoYmYg7PgjWMKgNXG0q24XbCAg2WlilkqB1/uiRhEdZO2pkbSgfKhhgwAA9O9AfMOZi6BjxjIzlLB0WdNZCHEILXa9xPcQpAjvhEOJO4IwbPfzqrUaprhn6I1/DvJb1JChUz79GUHtnO2/JUUFdGCKk6WbU3mQ+ssJaoGBklErTKVuP4Xt2Vi3lWyxZoxDDhOlfGnmhvIgTfM2qwyCxXi+291eE+T7mBSg3Cid4Iv0YDt+LWKajN0n+QCVO3slZC56DI04pUgeygcn8frC7VGO2fPXWSwgdCSmcQQs+X+jm37P3RtbZvRpnTj0yAoXH7mGoNF6yA1l8jaA0aip8gTow=

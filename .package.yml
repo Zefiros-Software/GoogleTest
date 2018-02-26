@@ -1,4 +1,8 @@
-description: his repository is a merger of the formerly separate GoogleTest and GoogleMock projects.
-keywords: ["Google Test", "Google Mock"]
-website: https://github.com/google/googletest
+description: >-
+  his repository is a merger of the formerly separate GoogleTest and GoogleMock
+  projects.
+keywords:
+  - Google Test
+  - Google Mock
+website: 'https://github.com/google/googletest'
 license: BSD 3-clauses
