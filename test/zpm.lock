@@ -4,7 +4,7 @@
   "private": {
     "libraries": [ {
       "definition": "../",
-      "hash": "3f0cf6b62ad1eb50d8736538363d3580dd640c3e",
+      "hash": "9557d29b7a5f3476ce024ae54410c997b9088f4a",
       "name": "Zefiros-Software/GoogleTest",
       "repository": "https://github.com/google/googletest.git",
       "tag": "HEAD",
@@ -12,12 +12,12 @@
     } ],
     "modules": [ {
       "definition": "https://github.com/Zefiros-Software/ZefirosDefaults.git",
-      "hash": "d9d31a4b3537d60447b5e77aeaa30e17597c0c40",
+      "hash": "9ec8e43e7ca1d9eab61e4514a8741234c2b8232f",
       "name": "Zefiros-Software/Defaults",
       "public": {
         "libraries": [ {
           "definition": "../",
-          "hash": "3f0cf6b62ad1eb50d8736538363d3580dd640c3e",
+          "hash": "9557d29b7a5f3476ce024ae54410c997b9088f4a",
           "name": "Zefiros-Software/GoogleTest",
           "repository": "https://github.com/google/googletest.git",
           "tag": "HEAD",
