@@ -32,7 +32,9 @@ export: |
         files "googlemock/src/gmock-all.cc"
         includedirs "googlemock/"
 
-        zpm.uses "GoogleTest"
+        if os.istarget("windows") then
+            zpm.uses "GoogleTest"
+        end
 
         zpm.export [[
             includedirs "googlemock/include/"
