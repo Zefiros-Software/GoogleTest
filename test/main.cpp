@@ -1,5 +1,7 @@
 /**
- * Copyright (c) 2017 Zefiros Software.
+ * @cond ___LICENSE___
+ *
+ * Copyright (c) 2016-2018 Zefiros Software.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -18,21 +20,23 @@
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
+ *
+ * @endcond
  */
 #include "gtest/gtest.h"
 #include "gmock/gmock.h"
 
 #include <stdint.h>
 
-TEST( UtilTest, FloatUInt32Max )
+TEST(UtilTest, FloatUInt32Max)
 {
     const uint8_t fl[2] = {1, 2};
-    EXPECT_THAT( fl, testing::Contains( 2 ) );
+    EXPECT_THAT(fl, testing::Contains(2));
 }
 
-int main( int argc, char **argv )
+int main(int argc, char **argv)
 {
-    testing::InitGoogleTest( &argc, argv );
+    testing::InitGoogleTest(&argc, argv);
 
     int32_t result = RUN_ALL_TESTS();
 
